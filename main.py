@@ -17,3 +17,8 @@ docs = vectorstore.similarity_search(question)
 print(len(docs))
 
 print(docs[0])
+
+from langchain import hub
+
+rag_prompt = hub.pull("rlm/rag-prompt")
+print(rag_prompt.messages)
