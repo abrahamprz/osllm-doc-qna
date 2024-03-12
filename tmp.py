@@ -38,7 +38,7 @@ vectorstore = Chroma.from_documents(
 retriever = vectorstore.as_retriever()
 prompt = hub.pull("rlm/rag-prompt")
 llm = HuggingFaceHub(
-    huggingfacehub_api_token=getenv("HUGGINGFACE_API_TOKEN"),
+    huggingfacehub_api_token=getenv("HUGGINGFACE_TOKEN"),
     repo_id="mistralai/Mixtral-8x7B-Instruct-v0.1",
     task="text-generation",
     model_kwargs={
@@ -60,4 +60,5 @@ rag_chain = (
     | StrOutputParser()
 )
 
-print(rag_chain.invoke("What is Task Decomposition?"))
+question = "What is Task Decomposition?"
+print(rag_chain.invoke(question))
