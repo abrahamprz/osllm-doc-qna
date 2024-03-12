@@ -1,0 +1,1 @@
+This project pretends to implement a Question Answering system from documents. The plan is to use LangChain, Hugging Face and RAG to achieve this.
