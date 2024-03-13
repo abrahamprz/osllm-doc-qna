@@ -26,5 +26,7 @@ Some auxiliary links:
 - [LangChain - Document Loaders](https://python.langchain.com/docs/modules/data_connection/document_loaders)
 
 
-# 03/12/2024
-
+# 03/13/2024
+Found two courses related to RAG:
+- [Building and Evaluating Advanced RAG](https://learn.deeplearning.ai/courses/building-evaluating-advanced-rag/lesson/1/introduction)
+- [Knowledge Graphs for RAG](https://learn.deeplearning.ai/courses/knowledge-graphs-rag/lesson/1/introduction)
