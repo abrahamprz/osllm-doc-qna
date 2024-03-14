@@ -1,7 +1,9 @@
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-loader = WebBaseLoader("https://python.langchain.com/docs/use_cases/question_answering/local_retrieval_qa")
+loader = WebBaseLoader(
+    "https://python.langchain.com/docs/use_cases/question_answering/local_retrieval_qa"
+)
 data = loader.load()
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
