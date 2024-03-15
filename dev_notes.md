@@ -30,3 +30,10 @@ Some auxiliary links:
 Found two courses related to RAG:
 - [Building and Evaluating Advanced RAG](https://learn.deeplearning.ai/courses/building-evaluating-advanced-rag/lesson/1/introduction)
 - [Knowledge Graphs for RAG](https://learn.deeplearning.ai/courses/knowledge-graphs-rag/lesson/1/introduction)
+
+
+# 03/15/2024
+This short course from deeplearning.ai and LangChain explains how chat with your data using LangChain. 
+- [LangChain Chat with Your Data](https://learn.deeplearning.ai/courses/langchain-chat-with-your-data/lesson/1/introduction)
+
+The plan is to adapt the course content to the project's needs.
