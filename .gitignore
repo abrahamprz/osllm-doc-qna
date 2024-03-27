@@ -1,6 +1,7 @@
 # Custom
 .env
-models/
+models/*
+!models/*.txt
 # docs/
 
 # Byte-compiled / optimized / DLL files
