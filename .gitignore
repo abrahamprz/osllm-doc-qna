@@ -1,7 +1,7 @@
 # Custom
 .env
 models/
-docs/
+# docs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
