@@ -37,3 +37,7 @@ This short course from deeplearning.ai and LangChain explains how chat with your
 - [LangChain Chat with Your Data](https://learn.deeplearning.ai/courses/langchain-chat-with-your-data/lesson/1/introduction)
 
 The plan is to adapt the course content to the project's needs.
+
+
+# 03/28/2024
+Now the goal is to create a interface where the user can upload a document and ask questions about it. The system should use RAG to answer the questions.
