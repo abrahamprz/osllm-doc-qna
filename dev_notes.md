@@ -41,3 +41,6 @@ The plan is to adapt the course content to the project's needs.
 
 # 03/28/2024
 Now the goal is to create a interface where the user can upload a document and ask questions about it. The system should use RAG to answer the questions.
+
+Check StreamLit + Langchain integration:
+- Example: [Streamlit + LangChain](https://github.com/langchain-ai/streamlit-agent/blob/main/streamlit_agent/basic_memory.py)
