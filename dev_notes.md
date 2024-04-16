@@ -44,3 +44,7 @@ Now the goal is to create a interface where the user can upload a document and a
 
 Check StreamLit + Langchain integration:
 - Example: [Streamlit + LangChain](https://github.com/langchain-ai/streamlit-agent/blob/main/streamlit_agent/basic_memory.py)
+
+# 04/16/2024
+Found a repo with examples of how to create a chatbot with LangChain and Streamlit.
+- [Chat with your documents (Basic RAG)] (https://langchain-chatbot.streamlit.app/chat_with_your_documents)
