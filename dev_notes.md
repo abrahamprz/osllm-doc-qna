@@ -43,7 +43,7 @@ The plan is to adapt the course content to the project's needs.
 Now the goal is to create a interface where the user can upload a document and ask questions about it. The system should use RAG to answer the questions.
 
 Check StreamLit + Langchain integration:
-- Example: [Streamlit + LangChain](https://github.com/langchain-ai/streamlit-agent/blob/main/streamlit_agent/basic_memory.py)
+- Example: [Streamlit + LangChain](https://github.com/langchain-ai/streamlit-agent/blob/main/streamlit_agent/chat_with_documents.py)
 
 # 04/16/2024
 Found a repo with examples of how to create a chatbot with LangChain and Streamlit.
