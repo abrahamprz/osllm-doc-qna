@@ -48,3 +48,7 @@ Check StreamLit + Langchain integration:
 # 04/16/2024
 Found a repo with examples of how to create a chatbot with LangChain and Streamlit.
 - [Chat with your documents (Basic RAG)] (https://langchain-chatbot.streamlit.app/chat_with_your_documents)
+
+# 04/18/2024
+Decide to check LangChain's documentation about Chatbots to understand how to create a chatbot with RAG.
+- [Chatbots](https://python.langchain.com/docs/use_cases/chatbots/)
