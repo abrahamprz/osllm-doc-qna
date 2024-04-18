@@ -12,9 +12,6 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.vectorstores import DocArrayInMemorySearch
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
-if 'langchain_messages' not in st.session_state:
-    st.session_state['langchain_messages'] = 'value'
-
 st.set_page_config(page_title="LangChain: Chat with Documents", page_icon="🦜")
 st.title("🦜 LangChain: Chat with Documents")
 
@@ -90,7 +87,6 @@ retriever = configure_retriever(uploaded_files)
 
 # Setup memory for contextual conversation
 msgs = StreamlitChatMessageHistory()
-print("MESSAGES", msgs)
 memory = ConversationBufferMemory(memory_key="chat_history", chat_memory=msgs, return_messages=True)
 
 # Setup LLM and QA chain
@@ -105,19 +101,19 @@ qa_chain = ConversationalRetrievalChain.from_llm(
     llm, retriever=retriever, memory=memory, verbose=True
 )
 
-if len(msgs.messages) == 0 or st.sidebar.button("Clear message history"):
+if len(msgs.messages) == 0 or st.sidebar.button("Limpiar historial de mensajes"):
     msgs.clear()
-    msgs.add_ai_message("How can I help you?")
+    msgs.add_ai_message("¿En qué puedo ayudarte?")
 
 
 avatars = {"human": "user", "ai": "assistant"}
 for msg in msgs.messages:
     st.chat_message(avatars[msg.type]).write(msg.content)
 
-if user_query := st.chat_input(placeholder="Ask me anything!"):
+if user_query := st.chat_input(placeholder="¡Pregúntame lo que quieras!"):
     st.chat_message("user").write(user_query)
 
-    with st.chat_message("assistant"):
+    with st.chat_message("asistente"):
         retrieval_handler = PrintRetrievalHandler(st.container())
         stream_handler = StreamHandler(st.empty())
         response = qa_chain.run(user_query, callbacks=[retrieval_handler, stream_handler])
