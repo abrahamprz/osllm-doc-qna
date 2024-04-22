@@ -1,7 +1,6 @@
 import os
 import tempfile
 import streamlit as st
-from langchain.chat_models import ChatOpenAI
 from langchain.document_loaders import PyPDFLoader
 from langchain.memory import ConversationBufferMemory
 from langchain.memory.chat_message_histories import StreamlitChatMessageHistory
@@ -77,10 +76,10 @@ class PrintRetrievalHandler(BaseCallbackHandler):
 
 
 uploaded_files = st.sidebar.file_uploader(
-    label="Upload PDF files", type=["pdf"], accept_multiple_files=True
+    label="Subir documentos PDF", type=["pdf"], accept_multiple_files=True, help="Sube documentos PDF para responder preguntas."
 )
 if not uploaded_files:
-    st.info("Please upload PDF documents to continue.")
+    st.info("Por favor, sube documentos en formato PDF para continuar.")
     st.stop()
 
 retriever = configure_retriever(uploaded_files)
@@ -113,7 +112,7 @@ for msg in msgs.messages:
 if user_query := st.chat_input(placeholder="¡Pregúntame lo que quieras!"):
     st.chat_message("user").write(user_query)
 
-    with st.chat_message("asistente"):
+    with st.chat_message("assistant"):
         retrieval_handler = PrintRetrievalHandler(st.container())
         stream_handler = StreamHandler(st.empty())
         response = qa_chain.run(user_query, callbacks=[retrieval_handler, stream_handler])
