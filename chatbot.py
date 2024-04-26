@@ -10,6 +10,7 @@ from langchain.callbacks.base import BaseCallbackHandler
 from langchain.chains import ConversationalRetrievalChain
 from langchain.vectorstores import DocArrayInMemorySearch
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 st.set_page_config(page_title="LangChain: Chat with Documents", page_icon="🦜")
 st.title("🦜 LangChain: Chat with Documents")
