@@ -50,6 +50,12 @@ contextualize_q_system_prompt = """Se proporciona un historial de chat y la últ
     de lo contrario, devuélvela tal cual. 
 """
 
+contextualize_q_system_prompt = """Se proporciona un historial de chat y la última pregunta \
+    del usuario, la cual podría referirse al contexto del historial. Si se refiere al contexto del historial, formula una pregunta independiente \
+    que se pueda entender sin el historial. NO respondas la pregunta, solo reformúlala si es necesario, \
+    de lo contrario, devuélvela tal cual. Si no se refiere al contexto del historial, devuélvela tal cual.
+"""
+
 contextualize_q_prompt = ChatPromptTemplate.from_messages(
     [
         ("system", contextualize_q_system_prompt),
@@ -67,6 +73,15 @@ Utiliza la siguiente información del contexto para responder la pregunta. \
 Si no sabes la respuesta, simplemente di que no la sabes. \
 Intenta mantener la respuesta concisa y usar máximo tres oraciones. \
 {context}
+"""
+
+qa_system_prompt = """Eres un asistente para responder preguntas e interacciones basicas. \
+    Una interaccion basica se refiere a saludos, despedidas y preguntas como '¿Cómo estás?' o '¿Qué tal?'. \
+    Si el usuario saluda o se despide, saluda o despidete. \
+    De lo contrario utiliza la siguiente información del contexto para responder la pregunta. \
+    Si no sabes la respuesta, simplemente di que no la sabes. \
+    Intenta mantener la respuesta concisa y usar máximo tres oraciones. \
+    {context}
 """
 
 qa_prompt = ChatPromptTemplate.from_messages(
