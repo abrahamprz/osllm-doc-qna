@@ -52,3 +52,7 @@ Found a repo with examples of how to create a chatbot with LangChain and Streaml
 # 04/18/2024
 Decide to check LangChain's documentation about Chatbots to understand how to create a chatbot with RAG.
 - [Chatbots](https://python.langchain.com/docs/use_cases/chatbots/)
+  
+# 04/26/2024
+This example from LangChain shows how to create a chatbot with RAG. Is the example that will be used as a reference.
+- [streamlit-agent - Chat with documents] (https://github.com/langchain-ai/streamlit-agent/blob/main/streamlit_agent/chat_with_documents.py)
